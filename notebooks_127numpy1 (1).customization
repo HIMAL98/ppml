@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "5b423506-89b2-42e0-a526-020c3b263e80",
+      "cell_type": "code",
+      "source": "import numpy as np  \na = np.array([[1, 2, 4], [5, 8, 7]]) \nprint (\"Array created using passed list:\\n\", a)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Array created using passed list:\n [[1 2 4]\n [5 8 7]]\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "0a700093-16a3-4c0d-9d02-9217c3a5b35c",
+      "cell_type": "code",
+      "source": "# Creating a 3X4 array with all zeros  \nb = np.zeros((3, 4)) \nprint (\"\\nAn array initialized with all zeros:\\n\", b) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nAn array initialized with all zeros:\n [[0. 0. 0. 0.]\n [0. 0. 0. 0.]\n [0. 0. 0. 0.]]\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "0cb8f8aa-d492-4632-9acc-3f5e48b820d6",
+      "cell_type": "code",
+      "source": "#Create a constant value array of complex type \nc = np.full((3, 3), 6) \nprint (\"\\nAn array initialized with all 6s.\\n\", c) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nAn array initialized with all 6s.\n [[6 6 6]\n [6 6 6]\n [6 6 6]]\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "3d8734e0-7fe1-40ba-8625-15bcc231beea",
+      "cell_type": "code",
+      "source": "#Create an array with random values  \nd = np.random.random((2, 2)) \nprint (\"\\nA random array:\\n\", d) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nA random array:\n [[0.80669796 0.74148454]\n [0.67762164 0.14272786]]\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "efc90609-b6da-42fa-8020-960afcd27638",
+      "cell_type": "code",
+      "source": "# Create a sequence of integers from 0 to 30 with steps of 5  \ne = np.arange(0, 30, 5)  \nprint (\"\\n A sequential array with steps of 5:\\n\", e)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\n A sequential array with steps of 5:\n [ 0  5 10 15 20 25]\n"
+        }
+      ],
+      "execution_count": 5
+    },
+    {
+      "id": "414209cc-6145-47f3-8fcb-d70b05986f63",
+      "cell_type": "code",
+      "source": "\narr = np.array([[1, 2, 3, 4], [5, 2, 4, 2],[1, 2, 0, 1]]) \nnewarr = arr.reshape(4, 3) \nprint (\"\\nOriginal array:\\n\", arr) \nprint (\"Reshaped array[4,3]:\\n\", newarr)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nOriginal array:\n [[1 2 3 4]\n [5 2 4 2]\n [1 2 0 1]]\nReshaped array[4,3]:\n [[1 2 3]\n [4 5 2]\n [4 2 1]\n [2 0 1]]\n"
+        }
+      ],
+      "execution_count": 7
+    },
+    {
+      "id": "0aea1ec0-31a0-4d40-8fcb-565e63a62878",
+      "cell_type": "code",
+      "source": "#Flatten array \nflarr= arr.flatten() \nprint (\"\\nOriginal array:\\n\", arr)  \nprint (\"Fattened array:\\n\", flarr)  ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nOriginal array:\n [[1 2 3 4]\n [5 2 4 2]\n [1 2 0 1]]\nFattened array:\n [1 2 3 4 5 2 4 2 1 2 0 1]\n"
+        }
+      ],
+      "execution_count": 8
+    },
+    {
+      "id": "1afe3386-a931-4b73-94e4-6f454444b11f",
+      "cell_type": "code",
+      "source": "# Printing array dimensions (axes) \nprint(\"\\nNo. of dimensions: \", arr.ndim)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nNo. of dimensions:  2\n"
+        }
+      ],
+      "execution_count": 9
+    },
+    {
+      "id": "cd55201f-905d-460b-a79d-468ed3d195ee",
+      "cell_type": "code",
+      "source": "# Printing shape of array  \nprint(\"\\nShape of array: \", arr.shape)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nShape of array:  (3, 4)\n"
+        }
+      ],
+      "execution_count": 10
+    },
+    {
+      "id": "c4fdc358-2d3d-425b-81ae-09f5383a3491",
+      "cell_type": "code",
+      "source": "# Printing size (total number of elements) of array \nprint(\"\\nSize of array: \", arr.size)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nSize of array:  12\n"
+        }
+      ],
+      "execution_count": 11
+    },
+    {
+      "id": "05a73b69-5c82-4d92-9f93-612b89b20408",
+      "cell_type": "code",
+      "source": "# Printing type of elements in array  \nprint(\"\\nArray stores elements of type: \", arr.dtype) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nArray stores elements of type:  int32\n"
+        }
+      ],
+      "execution_count": 12
+    },
+    {
+      "id": "b6e8ea0f-5b60-46b3-8ee2-7450a505585e",
+      "cell_type": "code",
+      "source": "#converting datatypes from integer to float \nnewtype=arr.astype('f')  \nprint(\"\\nConverted array elemnets:\\n\",newtype) \nprint(\"Converted array type:\",newtype)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nConverted array elemnets:\n [1. 2. 3. 4.]\nConverted array type: [1. 2. 3. 4.]\n"
+        }
+      ],
+      "execution_count": 16
+    },
+    {
+      "id": "acbe21e9-fa18-439a-978f-301312cb4a16",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nprint(p[3:0:-1])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[[10 11 12]\n [ 7  8  9]\n [ 4  5  6]]\n"
+        }
+      ],
+      "execution_count": 17
+    },
+    {
+      "id": "e8b1fc98-f841-4c37-9378-f87845a55f19",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nprint(p[2,0:2]) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[7 8]\n"
+        }
+      ],
+      "execution_count": 18
+    },
+    {
+      "id": "da4eec8d-c3ea-43ff-941f-74330a21ed6b",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nprint(p[2:,2:])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[[ 9]\n [12]\n [15]]\n"
+        }
+      ],
+      "execution_count": 19
+    },
+    {
+      "id": "1ecd8442-7b33-42d4-bbd5-3d2dae541eb3",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nprint(p[3:,3:]) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[]\n"
+        }
+      ],
+      "execution_count": 20
+    },
+    {
+      "id": "351890e9-9267-4fdd-b24d-4e91b137c962",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nprint(p[:,1]) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[ 2  5  8 11 14]\n"
+        }
+      ],
+      "execution_count": 22
+    },
+    {
+      "id": "4f474a5c-b7fc-48ea-a420-42b32aaf825a",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nc=p.astype('f') \nprint(c)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[[ 1.  2.  3.]\n [ 4.  5.  6.]\n [ 7.  8.  9.]\n [10. 11. 12.]\n [13. 14. 15.]]\n"
+        }
+      ],
+      "execution_count": 23
+    },
+    {
+      "id": "81ef835d-4edd-43ac-9209-d6fa5591baed",
+      "cell_type": "code",
+      "source": "import numpy as np \np=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]) \nc=p.astype('i') \nprint(c) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[[ 1  2  3]\n [ 4  5  6]\n [ 7  8  9]\n [10 11 12]\n [13 14 15]]\n"
+        }
+      ],
+      "execution_count": 24
+    },
+    {
+      "id": "f720bd0f-5243-4eb3-bb33-2af6c71448cf",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
