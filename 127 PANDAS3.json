@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "212a8b47-b3fb-4c1c-a353-d5e05052505d",
+      "cell_type": "code",
+      "source": "import pandas as pd\nimport numpy as np\narr=np.array(['P','a','n','d','a','s'])\na=pd.Series(arr)\nprint(\"Series from array:\")\nprint(a)\n                                                                   ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Series from array:\n0    P\n1    a\n2    n\n3    d\n4    a\n5    s\ndtype: object\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "d12e306c-67e8-4acf-9d4d-658a18df2609",
+      "cell_type": "code",
+      "source": "arr= {'x':0.,'y':1.,'z':2.}\nb=pd.Series(arr)\nprint(\"\\n\\nSeries from dictionary:\\n\")\nprint(b)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\n\nSeries from dictionary:\n\nx    0.0\ny    1.0\nz    2.0\ndtype: float64\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "4c893f6a-f427-458a-a204-c41759bb4697",
+      "cell_type": "code",
+      "source": "x=pd.Series(4,index=[0,1,2,3])\nprint(\"\\nSeries using scalar\\n\")\nprint(x)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nSeries using scalar\n\n0    4\n1    4\n2    4\n3    4\ndtype: int64\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "3da1bbc4-7948-4661-a511-16404330261e",
+      "cell_type": "code",
+      "source": "x=pd.Series([1,2,3],index=['a','b','c'])\nprint(\"\\nSeries through index:\")\nprint(x)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nSeries through index:\na    1\nb    2\nc    3\ndtype: int64\n"
+        }
+      ],
+      "execution_count": 6
+    },
+    {
+      "id": "20d1a206-5333-4263-9f67-0bf24a40b489",
+      "cell_type": "code",
+      "source": "a=pd.Series(data=[1,2,3,4])\nprint(\"\\n a series;\\n\",a)\nprint(\"\\nIndex: \\n\",a.index)\nprint(\"\\nValues:\\n\",a.values)\nprint(\"\\nShape:\",a.shape)\nprint(\"\\nDimensions:\",a.ndim)\nprint(\"\\nSize:\",a.size)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\n a series;\n 0    1\n1    2\n2    3\n3    4\ndtype: int64\n\nIndex: \n RangeIndex(start=0, stop=4, step=1)\n\nValues:\n [1 2 3 4]\n\nShape: (4,)\n\nDimensions: 1\n\nSize: 4\n"
+        }
+      ],
+      "execution_count": 7
+    },
+    {
+      "id": "1fc311ec-9c3c-4414-aed7-dfcf8499bb5a",
+      "cell_type": "code",
+      "source": "                                                                                                              ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "549df9f2-8441-4c36-a09b-f8d408faaeb6",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
