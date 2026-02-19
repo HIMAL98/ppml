@@ -1,0 +1,173 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMdcdFGEsavkm0D6qgXf6KC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/HIMAL98/ppml/blob/main/text%20file\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rJjcDKB94Qcg",
+        "outputId": "f33adf9c-be22-4665-e4ae-0e7c4346b3c8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "first line\n",
+            "\n",
+            "Second line\n",
+            "\n",
+            "third line\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "f=open(\"textfile.txt\",'w')\n",
+        "f.write(\"first line\\n\")\n",
+        "f.write(\"Second line\\n\")\n",
+        "f.write(\"third line\\n\")\n",
+        "f.close()\n",
+        "\n",
+        "k=open(\"textfile.txt\",'r')\n",
+        "print(k.readline())\n",
+        "print(k.readline())\n",
+        "print(k.readline())\n",
+        "k.close()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "m=open(\"textfile.txt\",'a')\n",
+        "m.write(\"fourth line\\n\")\n",
+        "m.write(\"fifth line\\n\")\n",
+        "m.close()\n",
+        "\n",
+        "p=open(\"textfile.txt\",'r')\n",
+        "print(p.read())\n",
+        "p.close()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZuPBSb3w4wmK",
+        "outputId": "3f5830d8-52d0-43c4-c914-07c8b3a6267b"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "first line\n",
+            "Second line\n",
+            "third line\n",
+            "fourth line\n",
+            "fifth line\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "with open(\"textfile.txt\",'r') as file:\n",
+        "    line = file.readlines()\n",
+        "    print(line)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yNFSZtJC7NZ5",
+        "outputId": "e81cda55-1cd3-41cb-e584-371c3c40c6b0"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['first line\\n', 'Second line\\n', 'third line\\n', 'fourth line\\n', 'fifth line\\n']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import json\n",
+        "x='{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}'\n",
+        "\n",
+        "y=json.loads(x)\n",
+        "print(y[\"age\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cHezzNlH94Q6",
+        "outputId": "fa77ec6a-809d-4e9e-d98f-acd8fb66f4bf"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = {\n",
+        "    \"name\":\"John\",\n",
+        "    \"age\":30\n",
+        "    \"city\":\"New York\"\n",
+        "}\n",
+        "\n",
+        "json_data = json.dumps(data)\n",
+        "print(jso)"
+      ],
+      "metadata": {
+        "id": "4dzTBTpBALa6"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
