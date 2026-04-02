@@ -452,11 +452,11 @@
         "print(\"\\nGroupby and Aggregate-sum function\\n\",df6)"
       ],
       "metadata": {
-        "id": "bK7YkecXHWpW",
-        "outputId": "63431941-d0a0-4804-d9b8-4e81745893f3",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "bK7YkecXHWpW",
+        "outputId": "63431941-d0a0-4804-d9b8-4e81745893f3"
       },
       "execution_count": 5,
       "outputs": [
@@ -564,7 +564,6 @@
   "metadata": {
     "colab": {
       "name": "Welcome To Colab",
-      "toc_visible": true,
       "provenance": [],
       "include_colab_link": true
     },
